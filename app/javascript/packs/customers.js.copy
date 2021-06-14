@@ -1,0 +1,18 @@
+$(document).ready(function() {
+  $('#customers-datatable').dataTable({
+    "processing": true,
+    "serverSide": true,
+    "ajax": {
+      "url": $('#customers-datatable').data('source')
+    },
+    "pagingType": "full_numbers",
+    "columns": [
+      {"data": "id"},
+      {"data": "first_name"},
+      {"data": "last_name"}
+    ]
+    // pagingType is optional, if you want full pagination controls.
+    // Check dataTables documentation to learn more about
+    // available options.
+  });
+});
